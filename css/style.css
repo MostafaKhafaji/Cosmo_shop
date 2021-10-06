@@ -188,10 +188,11 @@
         margin-left: 5px;
     }
     
+    body {
+        overflow-x: hidden;
+    }
+    
     @media(max-width:992px) {
-        body {
-            overflow-x: hidden;
-        }
         header .head {
             position: absolute;
             right: 0;
