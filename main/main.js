@@ -123,12 +123,10 @@ const navSlide = () => {
     const burger = document.getElementById("bars");
     const nav = document.querySelector(".head");
     const overlay = document.getElementById("nav");
-    const a = document.getElementsByTagName("nav");
     const exit = document.getElementById("ex");
     burger.addEventListener("click", () => {
         nav.classList.toggle("nav-active");
         overlay.classList.toggle("nav-background");
-        a[0].classList.toggle("overflow");
     });
     exit.addEventListener("click", function() {
         nav.classList.remove("nav-active");
@@ -151,3 +149,13 @@ if ($(window).width() < 992) {
             });
     });
 }
+
+$("#search").on("click", function() {
+    $(".search-pop input").slideToggle();
+    $(".search-pop").toggle();
+});
+
+$(".search-pop span").on("click", function() {
+    $(".search-pop").hide();
+    $(".search-pop input").slideToggle();
+});
